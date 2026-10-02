@@ -1,5 +1,5 @@
 <h1>Privacy Policy</h1>
-<p>Last updated: September 15, 2026</p>
+<p>Last updated: October 2, 2026</p>
 <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
 <p>We use Your Personal Data to provide and improve the Service. We collect, use, and disclose Your information as described in this Privacy Policy and, where required by applicable law, only where We have a valid legal basis to do so, including Your consent (where consent is required).</p>
 <h2>Interpretation and Definitions</h2>
@@ -46,11 +46,12 @@
 </ul>
 <p>Your name is entered during onboarding and stored only on Your Device as part of Your local profile. It is never transmitted to Our servers. Soarat requires no account and no sign-in.</p>
 <h4>Health Data</h4>
-<p>With Your explicit consent, Soarat accesses the following health-related data through Android Health Connect:</p>
+<p>With Your explicit consent, Soarat accesses the following health-related data:</p>
 <ul>
-<li><strong>Step Count (StepsCadence/Steps):</strong> Your daily step count, used to display activity totals on the diary screen and weekly progress chart. This data is read-only and is never transmitted outside Your device.</li>
+<li><strong>Step Count via Android Health Connect (Android):</strong> Your daily step count, used to display activity totals on the diary screen and weekly progress chart. This data is read-only and is never transmitted outside Your device.</li>
+<li><strong>Step Count via Apple HealthKit (iOS):</strong> Your daily step count, used for the same activity display purposes. This data is read-only — Soarat does not write to HealthKit — and is never transmitted outside Your device. If HealthKit is unavailable or permission is denied, You can enter step counts manually.</li>
 </ul>
-<p>Health Connect data is accessed solely for the purpose of displaying Your activity metrics within the app. We do not collect, store, or share this data on any external server.</p>
+<p>Health data is accessed solely for the purpose of displaying Your activity metrics within the app. We do not collect, store, or share this data on any external server. You can revoke access at any time through Your device settings.</p>
 <h4>Usage Data</h4>
 <p>Soarat does not use analytics SDKs and does not collect usage statistics, device identifiers, or advertising data. When the Application contacts Our backend or third-party food databases to fulfil Your requests (food search, barcode lookup, AI analysis), those servers technically receive Your request and IP address as part of normal internet communication. This information is used only to respond to Your request in real time and is not retained, profiled, or used for advertising.</p>
 <h4>Information Collected While Using the Application</h4>
@@ -63,13 +64,16 @@
 <p><strong>Camera:</strong> Soarat uses the device camera for two purposes: (1) scanning food product barcodes to look up nutritional information, and (2) capturing photos of meals for AI-powered calorie and macro estimation. Captured photos are sent to Our backend service for AI analysis and are not retained after processing.</p>
 </li>
 <li>
-<p><strong>Photo Library:</strong> Soarat allows You to select existing photos from Your device's photo library to attach to food entries or to use for AI meal analysis. Selected photos are processed locally or sent to Our backend for AI analysis and are not retained after processing.</p>
+<p><strong>Photo Library:</strong> Soarat allows You to select existing photos from Your device's photo library to attach to food entries or to use for AI meal analysis. Selected photos are processed locally or sent to Our backend for AI analysis and are not retained after processing. Separately, You may attach progress photos to Your weigh-ins; those photos are stored only on Your Device alongside Your weight history and are never uploaded.</p>
 </li>
 <li>
-<p><strong>Health Data (Health Connect):</strong> With Your explicit permission, Soarat reads daily step count data through Android Health Connect. This data is used solely to display Your daily step count on the diary screen and in a weekly progress chart, helping You track Your physical activity alongside Your nutrition goals. Step count data is read-only — Soarat does not write, modify, or share this data with any third party. All health data remains stored locally on Your device. You can revoke Health Connect access at any time through Your device settings.</p>
+<p><strong>Health Data (Health Connect / HealthKit):</strong> With Your explicit permission, Soarat reads daily step count data through Android Health Connect (on Android) or Apple HealthKit (on iOS). This data is used solely to display Your daily step count on the diary screen and in a weekly progress chart, helping You track Your physical activity alongside Your nutrition goals. Step count data is read-only — Soarat does not write, modify, or share this data with any third party. All health data remains stored locally on Your device. You can revoke access at any time through Your device settings, and You may enter step counts manually instead.</p>
 </li>
 <li>
-<p><strong>Push Notifications:</strong> Soarat may send push notifications to remind You of meal logging times that You configure in the app settings. These notifications are scheduled locally on Your device and do not involve the collection or transmission of personal data to external servers. You can disable notifications at any time through Your device settings or within the app.</p>
+<p><strong>Microphone (voice meal descriptions):</strong> When You tap the voice-logging button, Soarat records Your spoken meal description. The recording is sent to Our backend service, which forwards it to an AI model for transcription into text, and the text is then analyzed for nutritional content as described below. Voice recordings are processed transiently and are never stored after transcription. Recording happens only when You explicitly start it; the app never records in the background.</p>
+</li>
+<li>
+<p><strong>Push Notifications:</strong> Soarat may send push notifications to remind You of meal logging times and water intake that You configure in the app settings. These notifications are scheduled locally on Your device and do not involve the collection or transmission of personal data to external servers. You can disable notifications at any time through Your device settings or within the app.</p>
 </li>
 </ul>
 <p>Photos sent for AI analysis and search queries sent to food databases are transmitted only to fulfil Your request and are not retained after processing. All other information listed above is stored only on Your Device.</p>
@@ -87,7 +91,11 @@
 <p>Soarat uses artificial intelligence to provide the following features:</p>
 <ul>
 <li><strong>Meal Photo Analysis:</strong> When You take or select a photo of a meal, the image is sent to Our backend service, which forwards it to an AI model (such as OpenAI GPT-4o or Google Gemini) for analysis. The AI identifies food items and estimates nutritional values. Photos are processed transiently and are not stored after analysis.</li>
+<li><strong>Restaurant Menu Analysis:</strong> When You photograph a restaurant menu, the image is sent to Our backend service for AI analysis, which identifies dishes and ranks how well each fits a calorie-controlled diet. Menu photos are processed transiently and are not stored after analysis.</li>
 <li><strong>Food Description Analysis:</strong> When You describe a meal in text, the description is sent to Our backend service for AI analysis to estimate nutritional content.</li>
+<li><strong>Voice Meal Logging:</strong> When You dictate a meal description, the voice recording is sent to Our backend service, transcribed into text by an AI model, and the resulting text is analyzed for nutritional content as above. Recordings and transcripts are processed transiently and are not stored after processing.</li>
+<li><strong>Food Translation:</strong> When You search in Arabic or view results in Arabic, food names and search terms may be sent to Our backend service for AI translation between English and Arabic. Translations are cached on Your Device to avoid repeat requests. Translated content is not retained on any server after processing.</li>
+<li><strong>Weekly Nutrition Report:</strong> When You request a weekly report, a summary of Your logged week (daily calorie and protein totals versus Your goals — no names or identifiers) is sent to Our backend service for AI summarization into highlights and suggestions. Weekly statistics are processed transiently and are not stored after processing.</li>
 <li><strong>Food Information Enrichment:</strong> When You request missing nutritional information for a food item, the food name and existing data are sent to Our backend service for AI analysis to fill in missing details such as ingredients, allergens, fiber, sugar, and sodium content.</li>
 </ul>
 <p>AI processing is performed by third-party AI providers (OpenAI, Google, Groq, or OpenRouter) on behalf of Soarat. Your data is processed in accordance with these providers' privacy policies. We do not use Your data to train AI models.</p>
@@ -95,11 +103,13 @@
 <p>Soarat stores the following data locally on Your Device in a local SQLite database, including Your profile. This data stays on Your Device and is not transmitted to Our servers unless You explicitly export it:</p>
 <ul>
 <li>Food entries and nutritional logs</li>
-<li>Weight history</li>
+<li>Weight history, including any progress photos You attach to weigh-ins</li>
 <li>Water intake history</li>
 <li>Step count history</li>
 <li>User profile (name, age, height, weight, goals)</li>
-<li>App preferences and settings</li>
+<li>Built-in Saudi and Gulf food library (bundled with the app; works offline and involves no data collection)</li>
+<li>Arabic translation cache for food names (so repeat searches do not leave Your device)</li>
+<li>App preferences and settings, including reminder schedules</li>
 </ul>
 <h4>Data Export and Import</h4>
 <p>Soarat allows You to export Your data as a JSON file to Your device's local storage or share it with other apps. This feature is entirely client-side — no data is transmitted to external servers during export or import. You have full control over any exported files.</p>
@@ -131,7 +141,7 @@
 <li>
 <p>Server-side request data</p>
 <ul>
-<li>Meal photos, food descriptions, and search queries sent to Our backend or to third-party food and AI services are processed transiently to fulfil Your request and are not retained afterwards.</li>
+<li>Meal photos, menu photos, voice recordings, food descriptions, translation requests, weekly statistics, and search queries sent to Our backend or to third-party food and AI services are processed transiently to fulfil Your request and are not retained afterwards.</li>
 </ul>
 </li>
 <li>
